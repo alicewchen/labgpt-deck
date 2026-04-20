@@ -681,66 +681,6 @@ const Slide13Roadmap = () => (
   </SlideContainer>
 );
 
-// SLIDE 14: The Raise
-const Slide14Raise = () => (
-  <SlideContainer>
-    
-    <div className="mb-16 relative mt-8">
-      <SlideItem>
-        <h2 className="text-[160px] font-black leading-[0.8] uppercase tracking-[-0.06em] relative z-10">
-          $3.0<span className="text-brand">M</span>
-        </h2>
-        <div className="hero-word-outline text-[160px] uppercase absolute top-0 left-0 -z-10 opacity-20 translate-x-12 translate-y-8 uppercase">PRE-SEED</div>
-      </SlideItem>
-    </div>
-
-    <div className="grid grid-cols-2 gap-24 max-w-6xl items-end">
-      <div className="space-y-8">
-        <SlideItem>
-          <div className="divider-orange w-full" />
-        </SlideItem>
-        <SlideItem>
-          <p className="text-2xl text-white/80 font-light italic leading-snug">
-            "Building the first <span className="text-orange-emphasis">owned field-to-lab autonomous stack</span> and demonstrating closed-loop discovery."
-          </p>
-        </SlideItem>
-        <SlideItem className="flex gap-12">
-           <div>
-              <div className="text-xs font-black uppercase tracking-widest text-white/20 mb-1">Target Raise</div>
-              <div className="text-2xl font-black uppercase">$3M</div>
-           </div>
-           <div>
-              <div className="text-xs font-black uppercase tracking-widest text-white/20 mb-1">Pre-Money Range</div>
-              <div className="text-2xl font-black uppercase text-brand">$15M</div>
-           </div>
-        </SlideItem>
-
-      </div>
-      
-      <div className="space-y-4">
-        {[
-          { label: 'Engineering & AI', val: '45%' },
-          { label: 'Lab Infrastructure', val: '30%' },
-          { label: 'Scientific Talent', val: '15%' },
-          { label: 'Ops & Contingency', val: '10%' }
-        ].map((item, i) => (
-          <SlideItem key={i} className="relative h-14 bg-white/5 flex items-center px-6 group overflow-hidden border-l-2 border-brand/20">
-             <motion.div 
-               className="absolute left-0 top-0 bottom-0 bg-brand/10 group-hover:bg-brand/20 transition-colors"
-               initial={{ width: 0 }}
-               whileInView={{ width: item.val }}
-             />
-             <div className="relative z-10 flex justify-between w-full text-xs font-black uppercase tracking-[2px]">
-                <span className="text-white/60">{item.label}</span>
-                <span className="text-brand">{item.val}</span>
-             </div>
-          </SlideItem>
-        ))}
-      </div>
-    </div>
-  </SlideContainer>
-);
-
 export const SLIDES = [
   <Slide1Title />,
   <Slide2Gap />,
@@ -754,6 +694,5 @@ export const SLIDES = [
   <Slide10WhyWin />,
   <Slide11BusinessModel />,
   <Slide12Founders />,
-  <Slide13Roadmap />,
-  <Slide14Raise />
+  <Slide13Roadmap />
 ];
