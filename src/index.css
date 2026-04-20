@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Archivo+Black&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Black", sans-serif;
+
+  --color-brand: #E84C1E; /* Signature Orange */
+  --color-accent: #E84C1E;
+  --color-bg: #0a0a0a; /* Pure Near-Black */
+  --color-ink: #ffffff;
+  --color-muted: #888888;
+
+  --animate-pulse-subtle: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(0.98);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink antialiased overflow-hidden selection:bg-brand selection:text-bg font-sans;
+  }
+}
+
+.hero-word-outline {
+  -webkit-text-stroke: 2px #ffffff;
+  color: transparent;
+  font-family: var(--font-display);
+}
+
+.hero-word-filled {
+  color: #ffffff;
+  font-family: var(--font-display);
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.staircase-step {
+  @apply border-l-2 border-white/10 hover:border-brand transition-colors p-6 relative;
+}
+
+.timeline-dot {
+  @apply absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-brand shadow-[0_0_10px_#E84C1E];
+}
+
+.slide-transition-container {
+  perspective: 2000px;
+}
+
+/* Custom text utility for signatures */
+.text-orange-emphasis {
+  @apply text-brand font-bold italic;
+}
+
+.divider-orange {
+  @apply h-px bg-brand w-full opacity-40;
+}
+
+.divider-white {
+  @apply h-px bg-white w-full opacity-10;
+}
